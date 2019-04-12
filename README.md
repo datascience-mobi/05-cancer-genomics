@@ -1,12 +1,14 @@
-# Cancer Omics Analysis
+# Cancer Methylome Analysis
 
-- [Cancer Omics Analysis](#cancer-omics-analysis)
+- [Cancer Methylome Analysis](#cancer-methylome-analysis)
   - [Introduction](#introduction)
   - [Objective](#objective)
+    - [Additional Objectives](#additional-objectives)
   - [Dataset](#dataset)
   - [Literature](#literature)
     - [Reviews on DNA Methylation data](#reviews-on-dna-methylation-data)
     - [Reviews on Hematopoiesis](#reviews-on-hematopoiesis)
+    - [Literature on the Blueprint epigenome consortium](#literature-on-the-blueprint-epigenome-consortium)
   - [How to structure your project](#how-to-structure-your-project)
     - [Project](#project)
 
@@ -29,11 +31,28 @@ Here, you are tasked with identifying DMRs between groups of samples and interpr
 - Before the samples can be analyzed, they need to be normalized. What could cause problems in the downstream analysis or disturb it? How strict do you want to control for quality without losing too much information?
 - Identify regions with differentially methylated loci between the two sample groups. How should this analysis be done? Do you want to run it on all loci or filter out certain regions first(related to the normalization)?
 - Annotate your results and interpret their sequence context. Which genes and regulatory features are at your differentially methylated loci. Which functional impact could they have?
-- Document your results using R Markdown to provide explanations of your code and the reasoning behind it. Add visualizations and their explanations.
-  
+- Document your results using R Markdown to provide explanations of your code and the reasoning behind it. Add visualizations and their explanations. Remember at the end of this project each member will be evaluated on the basis of their R markdown code and need to be able to explain any aspect of the project.
+
+### Additional Objectives
+
+While the main focus of this project lies in getting used to working with data in R, depending on how fast you progress, there may still be time to tackle some more advanced topics. Due to the open nature of this assignment you can also consider your own ideas once you have finished the basic analysis. Some could be:
+
+- Compare and evaluate different approaches to calling DMRs (either different algorithms or by including different data)
+- Comparing different Dimensionality reductions and how well they perform on methylation data
+- Advanced visualization using R-markdown (Interactive plots using Plotly library or writing a Shiny Application)
+- If you have computational resources available you can try to do the data import into R yourself. The dataset can be downloaded, but the zipped file is about 45 Gb and when unpacked takes up around 200 - 300 GB of disk space. 
+
 ## Dataset
 
 The [Blueprint epigenome project](http://www.blueprint-epigenome.eu/) provides resources on haematopoietic epigenomes from both healthy and diseased samples. Each sample provided here has been processed with Whole Genome Bisulfite Sequencing (WGBS). You will be given a matrix of methylation status of sites for each sample.
+
+195 samples are in this cohort. We will provide 5 different comparison on subgroups of these samples for you to perform. Each group will work on a part of the dataset.
+
+- Placeholder
+- Placeholder
+- Placeholder3
+- Placeholder 4
+- Placeholder 5
 
 ## Literature
 
@@ -46,6 +65,11 @@ The [Blueprint epigenome project](http://www.blueprint-epigenome.eu/) provides r
 
 - [Hematopoiesis](https://doi.org/10.1101/cshperspect.a008250)
 - [Impact of DNA methylation programming on normal and pre-leukemic hematopoiesis](https://doi.org/10.1016/j.semcancer.2017.09.008)
+
+### Literature on the Blueprint epigenome consortium
+
+- [The International Human Epigenome Consortium: A Blueprint for Scientific Collaboration and Discovery](https://www.cell.com/cell/fulltext/S0092-8674(16)31528-8)
+- [DNA Methylation Dynamics of Human Hematopoietic Stem Cell Differentiation](https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(16)30360-5)
 
 ## How to structure your project
 
