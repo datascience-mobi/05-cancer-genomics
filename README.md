@@ -18,6 +18,11 @@ Supervisor:
 - Matthias Schlesner (m.schlesner@dkfz-heidelberg.de)
 - Christian Heyer (c.heyer@dkfz-heidelberg.de)
 
+
+Tutor:
+
+ - Valentina Guinchiglia ([Giunchiglia@stud.uni-heidelberg.de](mailto:Giunchiglia@stud.uni-heidelberg.de))
+ 
 ## Introduction
 
 DNA Methylation is a key mechanism regulating transcriptional processes and can be used to differentiate and classify cells. In developmental processes such as hematopoiesis, DNA methylation is paramount in influencing cell fate. Both array based and sequencing based methods can provide a map of DNA methylation, with a varying degree of coverage. One term you will commonly find in publications on comparing DNA methylation between sample groups are differentially methylated regions (DMRs).
