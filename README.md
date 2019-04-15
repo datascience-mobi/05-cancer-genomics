@@ -12,7 +12,6 @@
   - [How to structure your project](#how-to-structure-your-project)
     - [Project](#project)
 
-
 Supervisor:
 
 - Matthias Schlesner (m.schlesner@dkfz-heidelberg.de)
@@ -25,27 +24,26 @@ Tutor:
  
 ## Introduction
 
-DNA Methylation is a key mechanism regulating transcriptional processes and can be used to differentiate and classify cells. In developmental processes such as hematopoiesis, DNA methylation is paramount in influencing cell fate. Both array based and sequencing based methods can provide a map of DNA methylation, with a varying degree of coverage. One term you will commonly find in publications on comparing DNA methylation between sample groups are differentially methylated regions (DMRs).
+DNA Methylation is a key mechanism regulating transcriptional processes. Especially in regulatory regions such as promoter regions, DNA Methylation is known to be a signal of transcriptional repression. In developmental processes such as hematopoiesis, DNA methylation is paramount in deciding cell fate. Both array based and sequencing based methods can provide a map of DNA methylation, with a varying degree of coverage. One acronym you will commonly find in publications on comparing DNA methylation between sample groups are differentially methylated regions (DMRs).
 
-Here, you are tasked with identifying DMRs between groups of samples and interpret the sequence context of these regions. Reducing the dimensionality of the methylation whilst enriching for functionally relevant regions is vital, especially when working with constrained computational resources.
+Here, you are tasked with identifying DMRs between groups of samples and interpreting the sequence context of these regions. Reducing the dimensionality of the methylation whilst enriching for functionally relevant regions is vital, especially when working with constrained computational resources.
 
 ## Objective
 
-- Choose sample groups you wish to compare. What are your general expectations from the comparison? Explain the reasoning behind choosing these.
-- Report quality control measures. Decide which features you want to display and how you want to display these. Which data features could report on the sample quality?
+- Load the RDS.gz object into R and inspect it. You will also be provided a .csv with sample information.
+- Report quality control measures. Decide which features you want to display and how you want to display these.
 - Before the samples can be analyzed, they need to be normalized. What could cause problems in the downstream analysis or disturb it? How strict do you want to control for quality without losing too much information?
+- Filter features which you want to keep in the analysis. Choose a metric to reduce the number features to a better manageable amount.
 - Identify regions with differentially methylated loci between the two sample groups. How should this analysis be done? Do you want to run it on all loci or filter out certain regions first(related to the normalization)?
-- Annotate your results and interpret their sequence context. Which genes and regulatory features are at your differentially methylated loci. Which functional impact could they have?
+- Test for differential methylation between the sample groups shown.
+- Annotate your results and interpret their sequence context. Which genes and regulatory features are at your differentially methylated loci. Are the differentially methylated regions in the gene bodies or promoter regions? Research what impact your candidate genes could have.
 - Document your results using R Markdown to provide explanations of your code and the reasoning behind it. Add visualizations and their explanations. Remember at the end of this project each member will be evaluated on the basis of their R markdown code and need to be able to explain any aspect of the project.
 
 ### Additional Objectives
 
-While the main focus of this project lies in getting used to working with data in R, depending on how fast you progress, there may still be time to tackle some more advanced topics. Due to the open nature of this assignment you can also consider your own ideas once you have finished the basic analysis. Some could be:
-
-- Compare and evaluate different approaches to calling DMRs (either different algorithms or by including different data)
-- Comparing different Dimensionality reductions and how well they perform on methylation data
+- Evaluate Multiple approaches for DMR calling
+- Comparing different dimensionality reduction techniques or testing methodologies.
 - Advanced visualization using R-markdown (Interactive plots using Plotly library or writing a Shiny Application)
-- If you have computational resources available you can try to do the data import into R yourself. The dataset can be downloaded, but the zipped file is about 45 Gb and when unpacked takes up around 200 - 300 GB of disk space. 
 
 ## Dataset
 
@@ -53,11 +51,11 @@ The [Blueprint epigenome project](http://www.blueprint-epigenome.eu/) provides r
 
 195 samples are in this cohort. We will provide 5 different comparison on subgroups of these samples for you to perform. Each group will work on a part of the dataset.
 
-- Placeholder
-- Placeholder
-- Placeholder3
-- Placeholder 4
-- Placeholder 5
+- ALL vs. B-cells
+- AML vs. granulocytes (Bone Marrow)
+- AML vs monocytes (Blood)
+- CLL vs. B-cells
+- Mantle cell lymphoma vs. Bcells (Blood)
 
 ## Literature
 
