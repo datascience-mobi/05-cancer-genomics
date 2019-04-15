@@ -20,7 +20,7 @@ Supervisor:
 
 Tutor:
 
- - Valentina Guinchiglia ([Giunchiglia@stud.uni-heidelberg.de](mailto:Giunchiglia@stud.uni-heidelberg.de))
+ - Valentina Giunchiglia ([Giunchiglia@stud.uni-heidelberg.de](mailto:Giunchiglia@stud.uni-heidelberg.de))
  
 ## Introduction
 
