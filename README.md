@@ -1,6 +1,5 @@
 # Project 05: Cancer Methylome Analysis
 
-
 - [Project 05: Cancer Methylome Analysis](#project-05-cancer-methylome-analysis)
   - [Introduction](#introduction)
   - [Objective](#objective)
@@ -13,7 +12,7 @@
   - [How to structure your project](#how-to-structure-your-project)
     - [Project proposal](#project-proposal)
     - [Project](#project)
-    - [Data preprocessing**](#data-preprocessing)
+    - [Data preprocessing](#data-preprocessing)
     - [Normalize and Visualize](#normalize-and-visualize)
     - [Data reduction](#data-reduction)
     - [Regression](#regression)
@@ -36,7 +35,8 @@ Here, you are tasked with identifying DMRs between groups of samples and interpr
 
 ## Objective
 
-- Load the RDS.gz object into R and inspect it. You will also be provided a .csv with sample information.
+- Load the data into R and inspect it. You will also be provided a .csv with sample information.
+- Reorganize the data into a better legible and manageable format.
 - Report quality control measures. Decide which features you want to display and how you want to display these.
 - Before the samples can be analyzed, they need to be normalized. What could cause problems in the downstream analysis or disturb it? How strict do you want to control for quality without losing too much information?
 - Filter features which you want to keep in the analysis. Choose a metric to reduce the number features to a better manageable amount.
@@ -59,11 +59,15 @@ The [Blueprint epigenome project](http://www.blueprint-epigenome.eu/) provides r
 
 195 samples are in this cohort. We will provide 5 different comparison on subgroups of these samples for you to perform. Each group will work on a part of the dataset.
 
-- ALL vs. B-cells
-- AML vs. granulocytes (Bone Marrow)
+- ALL vs. B-cells [Download Link](https://figshare.com/s/7c9c9dc7ea35c38e3a77)
+- AML vs. granulocytes (Bone Marrow) 
 - AML vs monocytes (Blood)
-- CLL vs. B-cells
-- Mantle cell lymphoma vs. Bcells (Blood)
+- CLL vs. B-cells [Download Link](https://figshare.com/s/2e42ba145a9f8a5d79cd)
+- Mantle cell lymphoma vs. Bcells (Blood) [Download Link](https://figshare.com/s/db168ec583b0bca56944)
+
+Each Download link contains a file archive with a sample annotation .csv and RDS.gz object to load into R with `readRDS`.
+This object is a list with 4 entries Tiling (5kb window), genes, promoters, cpgislands. Each matrix has the corresponding genomic positions, gc content, Beta value methylation and coverage data. Start off by taking one of these datasets and getting used to working with R.
+
 
 ## Literature
 
@@ -102,7 +106,7 @@ These elements are to be present in your data.
 - **statistical tests** (t-test, proportion tests etc)
 - **Regression analysis**
 
-### Data preprocessing**  
+### Data preprocessing
 
 Clean, organize and preprocess the data for analysis
 
@@ -124,9 +128,11 @@ Clean, organize and preprocess the data for analysis
 
 ### Regression
 
-- While there are no numerical variables to run regression against, it is possible to regress against categorical variables using logistic regression.
+- Think about which predictions you want to test before you start testing regression between the variable groups.
+- For testing the prediction of disease vs. healthy consider using logistic regression instead of linear regression.
 
 ## General resources for R
 
 - [R for Data Science](https://r4ds.had.co.nz/) (Combines R basics and introduction to statistical techniques in R/R Markdown)
 - [Style Guidelines for R](http://adv-r.had.co.nz/Style.html) (Try to keep your code in a consistent format. Here is a short style guide you can consider using.)
+- [Bioconductor](https://bioconductor.org/) (Large R bioinformatics software repository. While you are supposed to do the analysis yourself and not have package to it for you, there are also a bunch of useful packages for working with sequencing data f.e. for annotating the genome.)
