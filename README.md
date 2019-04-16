@@ -1,7 +1,7 @@
 # Project 05: Cancer Methylome Analysis
 
 
-- [Cancer Methylome Analysis](#cancer-methylome-analysis)
+- [Project 05: Cancer Methylome Analysis](#project-05-cancer-methylome-analysis)
   - [Introduction](#introduction)
   - [Objective](#objective)
     - [Additional Objectives](#additional-objectives)
@@ -11,18 +11,23 @@
     - [Reviews on Hematopoiesis](#reviews-on-hematopoiesis)
     - [Literature on the Blueprint epigenome consortium](#literature-on-the-blueprint-epigenome-consortium)
   - [How to structure your project](#how-to-structure-your-project)
+    - [Project proposal](#project-proposal)
     - [Project](#project)
+    - [Data preprocessing**](#data-preprocessing)
+    - [Normalize and Visualize](#normalize-and-visualize)
+    - [Data reduction](#data-reduction)
+    - [Regression](#regression)
+  - [General resources for R](#general-resources-for-r)
 
 Supervisor:
 
 - Matthias Schlesner (m.schlesner@dkfz-heidelberg.de)
 - Christian Heyer (c.heyer@dkfz-heidelberg.de)
 
-
 Tutor:
 
- - Valentina Giunchiglia ([Giunchiglia@stud.uni-heidelberg.de](mailto:Giunchiglia@stud.uni-heidelberg.de))
- 
+- Valentina Giunchiglia ([Giunchiglia@stud.uni-heidelberg.de](mailto:Giunchiglia@stud.uni-heidelberg.de))
+
 ## Introduction
 
 DNA Methylation is a key mechanism regulating transcriptional processes. Especially in regulatory regions such as promoter regions, DNA Methylation is known to be a signal of transcriptional repression. In developmental processes such as hematopoiesis, DNA methylation is paramount in deciding cell fate. Both array based and sequencing based methods can provide a map of DNA methylation, with a varying degree of coverage. One acronym you will commonly find in publications on comparing DNA methylation between sample groups are differentially methylated regions (DMRs).
@@ -35,16 +40,18 @@ Here, you are tasked with identifying DMRs between groups of samples and interpr
 - Report quality control measures. Decide which features you want to display and how you want to display these.
 - Before the samples can be analyzed, they need to be normalized. What could cause problems in the downstream analysis or disturb it? How strict do you want to control for quality without losing too much information?
 - Filter features which you want to keep in the analysis. Choose a metric to reduce the number features to a better manageable amount.
+- Use dimensionality reduction techniques to extract the highest sources of variation in the data.
 - Identify regions with differentially methylated loci between the two sample groups. How should this analysis be done? Do you want to run it on all loci or filter out certain regions first(related to the normalization)?
-- Test for differential methylation between the sample groups shown.
+- Test for differential methylation between the sample groups.
+- Use logistic regression to find good predictors between healthy and diseased sample groups
 - Annotate your results and interpret their sequence context. Which genes and regulatory features are at your differentially methylated loci. Are the differentially methylated regions in the gene bodies or promoter regions? Research what impact your candidate genes could have.
 - Document your results using R Markdown to provide explanations of your code and the reasoning behind it. Add visualizations and their explanations. Remember at the end of this project each member will be evaluated on the basis of their R markdown code and need to be able to explain any aspect of the project.
 
 ### Additional Objectives
 
-- Evaluate Multiple approaches for DMR calling
+- Evaluate Multiple approaches for defining differential methylation
 - Comparing different dimensionality reduction techniques or testing methodologies.
-- Advanced visualization using R-markdown (Interactive plots using Plotly library or writing a Shiny Application)
+- Advanced visualization using R-markdown (Interactive plots using Plotly or Shiny libraries)
 
 ## Dataset
 
@@ -77,12 +84,49 @@ The [Blueprint epigenome project](http://www.blueprint-epigenome.eu/) provides r
 
 ## How to structure your project
 
+### Project proposal
+
+Each group is required to create a project proposal
+
+- summary of literature on this dataset
+- questions you want to address
+- approximate timetable
+
 ### Project
 
 These elements are to be present in your data.
 
-- **data normalization** Clean, organize and preprocess the data for analysis
-- **graphical representations** Visualization of the data (not just tables with numbers)
+- **descriptive statistics** about the datasets
+- **graphical representations**
 - **dimension reduction** analysis (PCA, clustering or k-means)
 - **statistical tests** (t-test, proportion tests etc)
-- **results interpretation**
+- **Regression analysis**
+
+### Data preprocessing**  
+
+Clean, organize and preprocess the data for analysis
+
+- Check Coverage at each position and remove low coverage regions (QC)
+- Remove regions with zero variability
+- Remove regions with high amount of missing values
+
+### Normalize and Visualize
+
+- Consider transforming methylation beta values in an attempt to normalize the variance.
+- Visualize some of the basic statistics of the dataset (Data distributions, mean, sd etc.)
+- Try to test for differences between the sample groups.
+
+### Data reduction
+
+- Reduce the Dimensionality of the dataset. Try to test various methods.
+- Attempt to run clustering analysis on this data and visualize (scatterplot)
+- Do groups your groups coincide with the sample labels?
+
+### Regression
+
+- While there are no numerical variables to run regression against, it is possible to regress against categorical variables using logistic regression.
+
+## General resources for R
+
+- [R for Data Science](https://r4ds.had.co.nz/) (Combines R basics and introduction to statistical techniques in R/R Markdown)
+- [Style Guidelines for R](http://adv-r.had.co.nz/Style.html) (Try to keep your code in a consistent format. Here is a short style guide you can consider using.)
