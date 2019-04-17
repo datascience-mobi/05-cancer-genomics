@@ -16,7 +16,9 @@
     - [Normalize and Visualize](#normalize-and-visualize)
     - [Data reduction](#data-reduction)
     - [Regression](#regression)
-  - [General resources for R](#general-resources-for-r)
+  - [General Resources for Programming](#general-resources-for-programming)
+    - [General resources for R](#general-resources-for-r)
+    - [General resources for Git](#general-resources-for-git)
 
 Supervisor:
 
@@ -131,8 +133,19 @@ Clean, organize and preprocess the data for analysis
 - Think about which predictions you want to test before you start testing regression between the variable groups.
 - For testing the prediction of disease vs. healthy consider using logistic regression instead of linear regression.
 
-## General resources for R
+## General Resources for Programming
+
+Here are some random links for R and git you might find useful. You don't need to go through all of these, but check them out if you want to know more about using R and git.
+
+### General resources for R
 
 - [R for Data Science](https://r4ds.had.co.nz/) (Combines R basics and introduction to statistical techniques in R/R Markdown)
 - [Style Guidelines for R](http://adv-r.had.co.nz/Style.html) (Try to keep your code in a consistent format. Here is a short style guide you can consider using.)
 - [Bioconductor](https://bioconductor.org/) (Large R bioinformatics software repository. While you are supposed to do the analysis yourself and not have package to it for you, there are also a bunch of useful packages for working with sequencing data f.e. for annotating the genome.)
+
+### General resources for Git
+
+- [Long but comprehensive (and a little entertaining) step by step guide: git for userRs](https://happygitwithr.com/)
+- [Git learning resources from Github](https://try.github.io/)
+- [Git "flight rules"](https://github.com/k88hudson/git-flight-rules) (Compendium of git problems and how to solve them)
+- [Quick setup for using git with Rstudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
