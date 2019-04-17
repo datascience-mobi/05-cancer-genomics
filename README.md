@@ -21,7 +21,7 @@
 Supervisor:
 
 - Matthias Schlesner (m.schlesner@dkfz-heidelberg.de)
-- Christian Heyer (c.heyer@dkfz-heidelberg.de)
+- **Christian Heyer** (c.heyer@dkfz-heidelberg.de)
 
 Tutor:
 
@@ -60,8 +60,8 @@ The [Blueprint epigenome project](http://www.blueprint-epigenome.eu/) provides r
 195 samples are in this cohort. We will provide 5 different comparison on subgroups of these samples for you to perform. Each group will work on a part of the dataset.
 
 - ALL vs. B-cells [Download Link](https://figshare.com/s/7c9c9dc7ea35c38e3a77)
-- AML vs. granulocytes (Bone Marrow) 
-- AML vs monocytes (Blood)
+- AML vs. granulocytes (Bone Marrow) [Download Link](https://figshare.com/s/987a7f2daf57158fb7af)
+- AML vs monocytes (Blood) [Download Link](https://figshare.com/s/4bf0788712b1957803ca)
 - CLL vs. B-cells [Download Link](https://figshare.com/s/2e42ba145a9f8a5d79cd)
 - Mantle cell lymphoma vs. Bcells (Blood) [Download Link](https://figshare.com/s/db168ec583b0bca56944)
 
@@ -104,7 +104,7 @@ These elements are to be present in your data.
 - **graphical representations**
 - **dimension reduction** analysis (PCA, clustering or k-means)
 - **statistical tests** (t-test, proportion tests etc)
-- **Regression analysis**
+- **regression analysis**
 
 ### Data preprocessing
 
